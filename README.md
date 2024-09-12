@@ -1,37 +1,92 @@
-[![Build Status](https://travis-ci.com/jmaister/excellentexport.svg?branch=master)](https://travis-ci.com/jmaister/excellentexport)
+
+[![Node CI](https://github.com/jmaister/excellentexport/actions/workflows/webpack.yml/badge.svg?branch=master)](https://github.com/jmaister/excellentexport/actions/workflows/webpack.yml)
 [![](https://data.jsdelivr.com/v1/package/npm/excellentexport/badge)](https://www.jsdelivr.com/package/npm/excellentexport)
+[![Rate on Openbase](https://badges.openbase.io/js/rating/excellentexport.svg)](https://openbase.io/js/excellentexport?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
+[![Coverage Status](https://coveralls.io/repos/github/jmaister/excellentexport/badge.svg?branch=master)](https://coveralls.io/github/jmaister/excellentexport?branch=master)
 
 # ExcellentExport.js
 
-JavaScript export to Excel or CSV
+ - [:heart: Sponsor ExcellentExport.js project:heart:](https://github.com/sponsors/jmaister)
 
-A quick JavaScript library to create export to Excel/CSV from HTML tables in the browser. No server required.
+ - JavaScript export to Excel or CSV.
 
-As part of the new version 3.0.0+, there is support for XLSX. The drawback is that the library is 600+ KB.
+ - A quick JavaScript library to create export to Excel/CSV from HTML tables in the browser. No server required.
 
-If you only need XLS or CSV, use 2.X.X versions.
+ - As part of the new version 3.0.0+, there is support for _XLSX_. The drawback is that the library is 200+ KB.
 
-Check my blog page for testing:
-[JavaScript export to Excel](http://jordiburgos.com/post/2013/javascript-export-to-excel.html)
+ - Check My Blog Page for Testing :
+      [JavaScript export to Excel](http://jordiburgos.com/post/2013/javascript-export-to-excel.html)
 
-[ExcellentExport.js update: JavaScript export to Excel and CSV](http://jordiburgos.com/post/2017/excellentexport-javascript-export-to-excel-csv.html)
-
-# TODO:
-
-* Filter and process cell values.
-* Set fonts to the sheet.
-* Insert images ?
+      [ExcellentExport.js update: JavaScript export to Excel and CSV](http://jordiburgos.com/post/2017/excellentexport-javascript-export-to-excel-csv.html)
 
 # Revision history:
 
+### 3.9.5
+
+* _Update npm dependencies to fix vulnerabilities_
+
+### 3.9.4
+
+* _Update npm dependencies to fix vulnerabilities_
+
+### 3.9.3
+
+* Fix TypeScript exported types
+
+### 3.9.0
+
+* Cell types and formats!!! Now you can define the cell type and format. For example, you can define a cell as a date or a number. You can also define the format of the cell. For example, you can define a cell as a date with the format "dd/mm/yyyy" or a number with the format "#,##0.00".
+
+### 3.8.1
+
+* Activate XLSX compression by default. The example of index.bigtable.html went from 18Mb to 3Mb.
+* _Update npm dependencies to fix vulnerabilities_
+* Update to latest version of TypeScript
+* Reduced size of the library from 912 KB to 277 KB!!!
+
+### 3.8.0
+
+* Allow RTL options on the whole file or sheet.
+* _Update npm dependencies to fix vulnerabilities_
+
+### 3.7.3
+
+* Fix (#591) remove columns parameter. Now it is not affected by repeated column numbers nor its order.
+
+### 3.7.2
+
+* _Update npm dependencies to fix vulnerabilities_
+
+### 3.7.1
+
+* _Update npm dependencies to fix vulnerabilities_
+* Start using Dependabot and get rid of Dependabot-preview
+
+### 3.7.0
+
+* Added option `openAsDownload: boolean`. Use this option to download as a file without using an anchor tag. So download can be triggered from a button.
+* _Update npm dependencies to fix vulnerabilities_
+
+### 3.6.0
+
+* Added sponsor link to the project [:heart: Sponsor ExcellentExport.js project:heart:](https://github.com/sponsors/jmaister)
+* Transform the project from JavaScript to TypeScript
+* Configure Jest as test runner
+* _Update npm dependencies to fix vulnerabilities_
+
+### 3.5.0
+
+* Add fixValue and fixArray functions to configuration: these configuration functions can be used to manipulate the values of the cells.
+* _Update npm dependencies to fix vulnerabilities_
+
 ### 3.4.3
 
-* Update npm dependencies to fix vulnerabilities
+* _Update npm dependencies to fix vulnerabilities_
 
 ### 3.4.2
 
 * Remove ES6 function syntax to support IE11
-* Update npm dependencies to fix vulnerabilities
+* _Update npm dependencies to fix vulnerabilities_
 
 ### 3.4.0
 
@@ -42,15 +97,15 @@ Check my blog page for testing:
 
 * Remove columns by index
 * Filter rows by value
-* Updated build to Webpack 4.x.x
+* _Updated build to Webpack 4.x.x_
 
 ### 3.2.1
 
-* Update npm dependencies to fix vulnerabilities
+* _Update npm dependencies to fix vulnerabilities_
 
 ### 3.2.0
 
-* Update npm dependencies to fix vulnerabilities
+* _Update npm dependencies to fix vulnerabilities_
 
 ### 3.1.0
 
@@ -59,7 +114,7 @@ Check my blog page for testing:
 ### 3.0.0
 
 * XLSX support. This bumps the build size to 640 KB.
-* New API: ExcellentExport.convert(...)
+* New API : ExcellentExport.convert(...)
 * Autogenerate download filename.
 * Data input from arrays or HTML Tables.
 * Multiple sheets for XLS or XLSX formats.
@@ -98,24 +153,26 @@ Check my blog page for testing:
 
 ### 1.4
 
-* Add LICENSE.txt with GPL v3.
+* _Add LICENSE.txt with GPL v3_
 * UTF-8 characters fixed.
 
 ### 1.3
 
-* Added minified version.
+* _Added minified version_
 
 ### 1.1
 
-* Added CSV data export
+* _Added CSV data export_
 
 ### 1.0
 
-* Added Excel data export
+* _Added Excel data export_
 
 ## Compatibility
 
-Firefox, Chrome, Internet Explorer 11+.
+ - Firefox
+ - Chrome
+ - Internet Explorer 11+
 
 # Install
 
@@ -127,23 +184,23 @@ Firefox, Chrome, Internet Explorer 11+.
 
     yarn add excellentexport
 
-## Bower
+## bower
 
     bower install excellentexport
 
 # Load
 
 
-Include script in your HTML:
+**Include script in your HTML:**
 
     <script type="text/javascript" src="dist/excellentexport.js"></script>
 
-Include script in your HTML using CDN:
+**Include script in your HTML using CDN:**
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/excellentexport@3.4.3/dist/excellentexport.min.js"></script>
 
 
-Require.js
+**Require.js**
 
     <script src="http://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
     <script>
@@ -152,7 +209,7 @@ Require.js
         });
     </script>
 
-ES6 import
+**ES6 import**
 
     import ExcellentExport from 'excellentexport';
 
@@ -179,29 +236,104 @@ ES6 import
 
      Options:
      {
-        anchor: String/Element,
-        format: 'xlsx'/'xls'/'csv',
-        filename: String
+        anchor: String or HTML Element,
+        format: 'xlsx' or 'xls' or 'csv',
+        filename: String,
+        rtl: Use Right-to-left characters, boolean (optional)
      }
 
-     Sheet element configuration:
-     {
-        name: 'Sheet 1', // Sheet name
-        from: {
-            table: String/Element, // Table ID or table element
-            array: [...], // Array with data
-            arrayHasHeader: true, // Array first row is the header
+     Sheets must be an array of sheet configuration objects. Sheet description:
+     [
+        {
+            name: 'Sheet 1', // Sheet name
+            from: {
+                table: String/Element, // Table ID or table element
+                array: [...] // Array with the data. Array where each element is a row. Every row is an array of the cells.
+            },
             removeColumns: [...], // Array of column indexes (from 0)
-            filterRowFn: function(row) {return true} // Return true to keep
+            filterRowFn: function(row) {return true}, // Function to decide which rows are returned
+            fixValue: function(value, row, column) {return fixedValue} // Function to fix values, receiving value, row num, column num
+            fixArray: function(array) {return array} // Function to manipulate the whole data array
+            rtl: Use Right-to-left characters, boolean (optional)
+            formats: [...] // Array of formats for each column. See formats below.
+            ...
         },
-        ...
-     }
+        {
+            ...
+        }, ...
+    ]
+
+## fixValue example
+
+This is an example for the _fixValue function_ to handle HTML tags inside a table cell.
+It transforms BR to line breaks and then strips all the HTML tags.
+
+                fixValue: (value, row, col) => {
+                    let v = value.replace(/<br>/gi, "\n");
+                    let strippedString = v.replace(/(<([^>]+)>)/gi, "");
+                    return strippedString;
+                }
+
+## Formats
+
+You can specify an array with the formats for a specific cell range (i.e. A1:A100, A1:D100, A1:H1, etc).
+
+Each element in the format array consists on:
+
+```json
+{
+    "range": "A1:A100", // Range of cells to apply the format, mandatory
+    "format": {
+        "type": "<cell_type>", // Type of format, mandatory
+        "pattern": "<pattern>" // Pattern, optional
+    }
+}
+```
+
+Example:
+
+```typescript
+          formats: [
+            {
+              range: "C2:C20",
+              format: {
+                type: "n",
+                pattern: "0.00",
+              },
+            },
+            {
+              range: "C2:C20",
+              format: ExcellentExport.formats.NUMBER,
+            }
+          ],
+
+```
+
+`format` can be used from one of the predefined types if you use TypeScript
+
+
+`cell_type` can be one of the followint:
+
+    's': String
+    'n': Number
+    'd': Date
+    'b': Boolean
+
+`pattern` is a string with the format pattern used in Excel. For example:
+
+    '0' // Integer
+    '0.00' // 2 decimals
+    'dd/mm/yyyy' // Date
+    'dd/mm/yyyy hh:mm:ss' // Date and time
+    '0.00%' // Percentage
+    '0.00e+00' // Scientific notation
+    '@' // Text
 
 # Notes
 
-IE8 or lower do not support *data:* url schema.
-IE9 does not support *data:* url schema on links.
-IE10 and above and Edge are supported via the Microsoft-specific `msOpenOrSaveBlob` method.
+ - IE8 or lower do not support *data:* url schema.
+ - IE9 does not support *data:* url schema on links.
+ - IE10 and above and Edge are supported via the Microsoft-specific `msOpenOrSaveBlob` method.
 
 # Test
 
@@ -213,18 +345,18 @@ IE10 and above and Edge are supported via the Microsoft-specific `msOpenOrSaveBl
 
 # Build
 
-Install dependencies:
+**Install dependencies:**
 
     npm install
-    
-Build development version dist/excellentexport.js
+
+**Build development version dist/excellentexport.js**
 
     npm run build
 
-Build publish version of dist/excellentexport.js
+**Build publish version of dist/excellentexport.js**
 
     npm run prod
 
-Publish
+**Publish**
 
     npm publish
